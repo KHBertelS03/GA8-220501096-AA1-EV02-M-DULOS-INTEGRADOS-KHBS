@@ -1,0 +1,290 @@
+body    {
+ background-image: url("https://i.pinimg.com/originals/ca/e1/1d/cae11df222ff8639d02aa7b81d1d296a.gif") !important;
+  background-size: cover;
+  margin: 0;
+  padding: 0;   
+}
+
+
+.error{
+  background-size: cover;
+}
+
+.titu{
+  color: #ffffff;
+}
+
+
+footer {
+  background-color: rgba(37, 148, 182, 0.1);
+  color: #fcfcfc;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+}
+
+@keyframes cambioColor {
+  0% { color: red; } /* Color inicial */
+  25% { color: blue; } /* Cambio a azul en 0.2 segundos */
+  50% { color: rgb(0, 0, 0); } /* Cambio a verde en 0.4 segundos */
+  75% { color: yellow; } /* Cambio a amarillo en 0.6 segundos */
+  100% { color: red; } /* Volver al color inicial en 0.8 segundos */
+}
+
+.ins{
+  color: #4cbb48; 
+  animation: cambioColor 4.8s infinite; 
+}
+
+.repro{
+  color: #ccc;
+  text-transform:inherit;
+}
+
+.ipass{
+  color: #ffffff;
+  background-color: aliceblue;
+}
+
+
+.re{
+  text-align: center;
+}
+
+.formulario {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 400px;
+ background-color: rgba(37, 148, 182, 0.3);
+ border-radius: 15px;
+ border-style:inset ; 
+}
+
+
+.formulario h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #ccc; 
+}
+
+.formulario form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.imgF{ 
+ background-size: cover;
+}
+
+form .username{
+  position: relative;
+  border-bottom: 2px solid #131313;
+  margin: 30px 0;
+}
+
+
+.username input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.username label{
+  position: absolute;
+  top: 50%;
+  left: 5px; 
+  color: #ffffff; 
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.username span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #6C3483;
+  transition: .5s;
+}
+
+.username input:focus ~ label,
+.username input:focus ~ label {
+  top: -6px;
+  color: #15ff00;
+}
+
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+  width: 100%;
+}
+
+.recordar{
+  margin: 5px 0 20px 5px;
+  color: rgb(255, 241, 52);
+  text-align: center;
+  cursor: pointer;
+}
+
+.recordar:hover{
+  text-decoration: underline;
+}
+
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid; 
+  background: hsla(135, 94%, 52%, 0.596);  
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.Registrar a{
+  color: rgb(255, 16, 243);
+  text-decoration: none; 
+  font-size: 25px;
+  text-align: center;
+}
+
+.registrarse a:hover{
+  text-decoration: underline;
+  text-align: center
+} 
+
+.text{
+
+  color: white;
+  text-align: center;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+main {
+  margin-top: 80px; /* Para dejar espacio debajo del header */
+}
+
+.container21 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.developer {
+  text-align: center;
+}
+
+.developer img {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.developer img:hover {
+  transform: scale(1.1);
+}
+
+.developer h2 {
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 0; /* Espaciado interno */
+  margin-top:20px;
+  border-left: black;
+  border: dotted black;
+  display: block;
+  animation: aparecer 1s ease-in-out forwards;
+}
+
+/* Estilos de la lista ul */
+nav ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centra los elementos de la lista */
+  animation: aparecer 1s ease-in-out forwards;
+}
+
+/* Estilos de los elementos li */
+nav ul li {
+  display: inline-block; /* Muestra los elementos en línea */
+  margin-right: 30px; /* Espacio entre elementos */ 
+  padding-left: 20px ;
+  animation: aparecer 1s ease-in-out forwards;
+}
+
+.kei{ 
+  width: 30px;
+  text-align: center;
+  position: center;
+}
+
+/* Estilos de los enlaces a */
+nav ul li a {
+  color: #ffffff; /* Color de texto */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 15px; /* Espaciado interno */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+@keyframes cambioColor {
+  0% { color: red; } /* Color inicial */
+  25% { color: blue; } /* Cambio a azul en 0.2 segundos */
+  50% { color: green; } /* Cambio a verde en 0.4 segundos */
+  75% { color: yellow; } /* Cambio a amarillo en 0.6 segundos */
+  100% { color: red; } /* Volver al color inicial en 0.8 segundos */
+}
+
+nav ul li a {
+  background-color: rgb(0, 0, 0); /* Color inicial */
+  transition: color 0.4s; /* Transición suave de color */
+  border: rgb(255, 255, 255) ;
+  animation: aparecer 1s ease-in-out forwards;
+}
+
+nav ul li a:hover {
+  animation: cambioColor 0.8s infinite; /* Aplicar la animación con duración de 0.8 segundos y repetición infinita */
+}

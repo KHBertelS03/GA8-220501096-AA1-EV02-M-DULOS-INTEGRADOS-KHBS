@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="css/styles1.css">
+    <script>
+        function editarUsuario(id) {
+            var nombres = prompt("Ingrese los nuevos nombres:");
+            var correo = prompt("Ingrese el nuevo correo:");
+            var contraseña = prompt("Ingrese la nueva contraseña:");
+            var usuario = prompt("Ingrese el nuevo usuario:");
+
+            if (nombres && correo && contraseña && usuario) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "conex/usuarios_be1.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert("Usuario actualizado");
+                        location.reload();
+                    }
+                };
+                xhr.send("action=update&id=" + id + "&nombres=" + nombres + "&correo=" + correo + "&contraseña=" + contraseña + "&usuario=" + usuario);
+            }
+        }
+
+        function eliminarUsuario(id) {
+            if (confirm("¿Está seguro que desea eliminar este usuario?")) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "conex/usuarios_be1.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert("Usuario eliminado");
+                        location.reload();
+                    }
+                };
+                xhr.send("action=delete&id=" + id);
+            }
+        }
+
+        function agregarUsuario() {
+            var nombres = document.getElementById("nombres").value;
+            var correo = document.getElementById("correo").value;
+            var contraseña = document.getElementById("contraseña").value;
+            var usuario = document.getElementById("usuario").value;
+
+            if (nombres && correo && contraseña && usuario) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "conex/usuarios_be1.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert("Usuario agregado");
+                        location.reload();
+                    }
+                };
+                xhr.send("action=add&nombres=" + nombres + "&correo=" + correo + "&contraseña=" + contraseña + "&usuario=" + usuario);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "conex/usuarios_be1.php?action=list", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("usuarios-list").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Usuarios</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Correo</th>
+                    <th>Contraseña</th>
+                    <th>Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="usuarios-list">
+                <!-- Los usuarios serán listados aquí -->
+            </tbody>
+        </table>
+
+        <h2>Agregar Usuario</h2>
+        <form onsubmit="event.preventDefault(); agregarUsuario();">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" required><br>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" required><br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" required><br>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" required><br>
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+</body>
+</html>

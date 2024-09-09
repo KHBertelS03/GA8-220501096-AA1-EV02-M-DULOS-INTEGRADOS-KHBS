@@ -1,0 +1,282 @@
+/* Estilos generales */
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #555555;
+    text-align: left;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 14px;
+    color: #333333;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensajes de estado */
+.success-message {
+    color: #28a745;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+nav {
+    background-color: rgba(68, 255, 239, 0.5);
+    padding: 15px 0; /* Espaciado interno */
+    margin-top:20px;
+    border-left: black;
+    border: dotted black;
+    display: block;
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+ 
+/* Estilos generales del nav */
+nav {
+    background-color: rgba(68, 255, 239, 0.5);
+    padding: 15px 0; /* Espaciado interno */
+    margin-top:20px;
+    border-left: black;
+    border: dotted black;
+    display: block;
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+ 
+
+/* Estilos de la lista ul */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra los elementos de la lista */
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+/* Estilos de los elementos li */
+nav ul li {
+    display: inline-block; /* Muestra los elementos en línea */
+    margin-right: 30px; /* Espacio entre elementos */ 
+    padding-left: 20px ;
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+
+
+/* Estilos de los enlaces a */
+nav ul li a {
+    color: #ffffff; /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+@keyframes cambioColor {
+    0% { color: red; } /* Color inicial */
+    25% { color: blue; } /* Cambio a azul en 0.2 segundos */
+    50% { color: green; } /* Cambio a verde en 0.4 segundos */
+    75% { color: yellow; } /* Cambio a amarillo en 0.6 segundos */
+    100% { color: red; } /* Volver al color inicial en 0.8 segundos */
+}
+
+nav ul li a {
+    background-color: rgb(0, 0, 0); /* Color inicial */
+    transition: color 0.4s; /* Transición suave de color */
+    border: rgb(255, 255, 255) ;
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+nav ul li a:hover {
+    animation: cambioColor 0.8s infinite; /* Aplicar la animación con duración de 0.8 segundos y repetición infinita */
+}
+
+.fond{
+    background-size: cover;  
+    display: block;  
+} 
+ 
+
+
+.kei{ 
+    width: 30px;
+    text-align: center;
+    position: center;
+}
+
+.keiry { 
+    width: 50%;
+    height: 100px;
+    margin-right: 30px;
+    padding-left: 28%;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    animation: aparecer 1s ease-in-out forwards; /* Animación para aparecer */
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+
+.contenedor {
+    display: inline-block;
+    vertical-align: top; 
+    margin-bottom: 20px; 
+   
+}
+
+.logo { 
+    width: calc(100% - 90px);
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+    width: 100%; /* Ancho de la imagen */ 
+    height: auto; /* Altura ajustada automáticamente */
+    transition: filter 0.1s; /* Transición suave de filtro */
+}
+
+.contenedor:hover .logo {
+    filter: grayscale(100%); /* Aplicar escala de grises al pasar el mouse */
+}
+
+
+.pdf {
+    width: 80px; /* Ancho de la imagen */
+    height: auto; /* Altura ajustada automáticamente */
+    margin-right: 10px; /* Espacio a la derecha de la imagen */
+    animation: aparecer 1s ease-in-out forwards; 
+}
+
+.midi{
+    text-align: center; 
+}
+
+.textt{
+    background-color: rgba(68, 255, 239, 0.3);
+    align-items: center; 
+    padding-left:  50px;
+}
+
+.logo{
+    width: 20%;
+    height: auto;  
+    margin-right: 30px;
+    padding-left: 3%;
+    
+    transform: scale(0); /* Escala inicial de cero */
+    animation: construir 1s forwards; /* Animación para construir */
+}
+ 
+@keyframes construir {
+    0% {
+        transform: scale(0); /* Escala inicial de cero */
+    }
+    100% {
+        transform: scale(1); /* Escala final de uno */
+    }
+}
+
+
+.contenedor-imagenes { 
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Ajustar al tamaño de la ventana */
+    background-color: rgba(68, 255, 239, 0.3);
+}
+
+.contenedor-imagenes img {
+    width: 600px; /* Ancho inicial de las imágenes */
+    height: 500px; /* Altura ajustada automáticamente */
+    margin: 10px; /* Espacio entre las imágenes */
+    opacity: 0; /* Inicialmente ocultas */
+    animation: aparecer 1s ease-in-out forwards; /* Animación para aparecer */
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0; /* Inicialmente ocultas */
+        transform: translateY(20px); /* Desplazamiento hacia abajo */
+    }
+    100% {
+        opacity: 1; /* Totalmente visibles */
+        transform: translateY(0); /* Sin desplazamiento */
+    }
+}
+
+
+.des{ 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-left: 100px;
+    border-right: 100px;
+    height: 50vh; /* Ajustar al tamaño de la ventana */
+     animation: aparecer 1s ease-in-out forwards;
+}
+ 
+  
